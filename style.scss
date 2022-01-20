@@ -1,0 +1,78 @@
+@import "variables";
+@import "ipad";
+@import "tablet";
+
+nav {
+  @include flex-box(space-between, 100%);
+  height: auto;
+  background-color: $white;
+  padding: 25px 20px;
+  h1 {
+    font-size: 28px;
+    font-weight: 700;
+    span {
+      color: $pk;
+    }
+  }
+
+  .yp {
+    display: none;
+  }
+  .hamburger {
+    margin-top: 7px;
+  }
+}
+
+@media (min-width: 768px) {
+  nav {
+    @include flex-box(space-between, 10%);
+    flex-direction: column;
+    background-color: blue;
+    h1 {
+      display: none;
+    }
+    .yp {
+      display: block;
+    }
+    .hamburger div {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  nav {
+    @include flex-box(space-between, 30%);
+    flex-direction: column;
+    background-color: yellow;
+    h1 {
+      font-size: 40px;
+      display: block;
+    }
+    .yp {
+      display: none;
+    }
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+  transition: 0.3s;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
