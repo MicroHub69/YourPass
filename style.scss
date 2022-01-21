@@ -29,12 +29,17 @@ nav {
       }
     }
   }
-
+  .manage_account {
+    display: none;
+  }
   ul {
-    li {
+    a {
       margin: 10px 0;
       display: flex;
       padding: 15px 20px;
+      font-size: 18px;
+      line-height: 25px;
+      font-weight: bold;
       border-radius: 5px;
       transition: all 0.3s ease;
       svg {
@@ -82,10 +87,43 @@ nav {
     width: 100%;
     top: 70px;
     left: 0;
-    transform: translatex(-500px);
-    // display: none;
+    padding-bottom: 45px;
+    transform: translateX(-768px);
     transition: all 0.5s ease;
-    li {
+    .avatar {
+      margin-top: 60px;
+    }
+    .manage_account {
+      display: block;
+      padding: 5px 20px;
+      h3 {
+        font-size: 16px;
+        margin-bottom: 16px;
+      }
+      small {
+        a {
+          font-size: 14px;
+          padding: 0;
+          font-weight: 500;
+        }
+      }
+      h5 {
+        margin-bottom: 15px;
+        font-size: 15px;
+        padding: 0;
+        a {
+          padding: 0;
+        }
+      }
+      h6 {
+        a {
+          padding: 0;
+          color: $danger;
+          opacity: 0.8;
+        }
+      }
+    }
+    a {
       padding: 10px 47px;
       font-size: 18px;
       &:hover,
@@ -121,7 +159,7 @@ nav {
     flex-direction: column;
     position: relative;
     ul {
-      margin-top: 100px;
+      margin-top: 0px;
     }
     h1 {
       display: none;
@@ -132,6 +170,9 @@ nav {
     .hamburger div {
       display: none;
     }
+  }
+  .hod {
+    visibility: hidden;
   }
 }
 
@@ -151,7 +192,7 @@ nav {
       display: none;
     }
     ul {
-      li {
+      a {
         margin: 10px 0;
       }
     }
