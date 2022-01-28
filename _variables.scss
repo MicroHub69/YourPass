@@ -25,9 +25,13 @@ $shadow: 2px 0px 4px rgba(0, 0, 0, 0.12);
 body {
   background-color: $gray;
   max-width: 1440px;
-  margin: 0 auto;
+  margin: 0 auto !important;
 }
-
+h1,
+h2,
+h3 {
+  color: $black;
+}
 h4 {
   font-family: Nunito;
   font-style: normal;
@@ -96,10 +100,10 @@ input {
   padding: 15px;
   border-radius: 5px;
   flex: none;
-  order: 1;
+
   border: 0;
   outline: 0;
-  flex-grow: 0;
+
   margin: 8px 0px;
 }
 button {

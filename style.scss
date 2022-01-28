@@ -6,8 +6,11 @@ nav {
   @include flex-box(space-between, 100%);
   height: auto;
   background-color: $white;
-  padding: 25px 20px;
   box-shadow: $shadow;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
   .avatar {
     display: flex;
     margin: 20px;
@@ -36,7 +39,7 @@ nav {
     a {
       margin: 10px 0;
       display: flex;
-      padding: 15px 20px;
+      // padding: 15px 20px;
       font-size: 18px;
       line-height: 25px;
       font-weight: bold;
@@ -77,8 +80,107 @@ nav {
   }
 }
 
-// MAX WIDTH
+#events {
+  position: absolute;
+  right: 20px;
+  background-color: $pk;
+  color: $white;
+  height: 45px;
+  width: 159px;
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: 20px;
+  &::before {
+    content: "+";
+    font-size: 20px;
+    margin-right: 12px;
+    font-weight: 600;
+    color: $white;
+  }
+}
+
+#main {
+  margin-top: 150px;
+  padding: 0 20px;
+  .four_cards {
+    .card {
+      background-color: $white;
+      box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.08),
+        0px 2px 4px rgba(0, 0, 0, 0.08);
+      border-radius: 5px;
+      display: flex;
+      margin-bottom: 20px;
+      justify-content: space-between;
+      padding: 10px 13px;
+      .icon {
+        img {
+          width: 48px;
+          height: 48px;
+        }
+        h2 {
+          margin-top: 56px;
+          font-size: 40px;
+          font-weight: 700;
+          margin-left: 15px;
+        }
+        h3 {
+          font-size: 20px;
+          margin-top: 30px;
+        }
+        select {
+          background-color: $gray;
+          width: 67px;
+          height: 24px;
+          border: 0;
+          padding: 5px;
+          border-radius: 3px;
+        }
+      }
+    }
+  }
+  .check {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 43px;
+    .check_wrap {
+      display: flex;
+      justify-content: space-between;
+      width: 52%;
+    }
+    input {
+      width: 20px;
+      height: 20px;
+    }
+    h2 {
+      margin-top: 7px;
+      // font-family: Nunito;
+      // font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 19px;
+      text-transform: uppercase;
+      color: rgba(51, 51, 51, 0.8);
+    }
+  }
+}
+
+// MAX WIDTH STARTs FROM HERE
 @media (max-width: 767px) {
+  nav {
+    padding: 25px 20px;
+  }
+  .main_container {
+    margin-top: 130px;
+    padding: 0 20px;
+    .nav2 {
+      h2 {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .avatar_bell {
+    display: none;
+  }
   nav ul {
     display: flex;
     position: absolute;
@@ -88,7 +190,7 @@ nav {
     top: 70px;
     left: 0;
     padding-bottom: 45px;
-    transform: translateX(-768px);
+    transform: translateX(768px);
     transition: all 0.5s ease;
     .avatar {
       margin-top: 60px;
@@ -152,20 +254,122 @@ nav {
       }
     }
   }
+
+  .barcode {
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: $shadow;
+    height: 200px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: $white;
+    position: relative;
+    h3 {
+      width: 42%;
+      height: 45px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      top: 76px;
+      position: absolute;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 19px;
+      letter-spacing: 0.04em;
+      background-color: $gray;
+    }
+    .search {
+      position: relative;
+      input {
+        background-color: $gray;
+        margin-top: 0;
+        border-radius: 5px;
+        padding-left: 50px;
+        width: 90%;
+      }
+
+      #abs {
+        position: absolute;
+        width: 22px;
+        top: 6px;
+        left: 6px;
+        height: 22px;
+      }
+    }
+    img {
+      height: 45px;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 45px;
+    }
+    select {
+      width: 42%;
+      position: absolute;
+      right: 16px;
+      top: 76px;
+      border: 5px;
+      padding: 0 10px;
+      height: 45px;
+      border-radius: 5px;
+    }
+  }
+  #main .check {
+    margin-top: 85px;
+  }
+  #main .check .check_wrap {
+    width: 45%;
+  }
 }
+
 @media (min-width: 768px) {
   nav {
     @include flex-box(space-between, 10%);
     flex-direction: column;
     position: relative;
+    min-height: 100vh;
+    padding: 25px 0;
+    position: fixed;
     ul {
       margin-top: 0px;
+      a {
+        margin: 10px 0;
+        display: flex;
+        padding: 15px 0px 15px 30px;
+        font-size: 18px;
+        line-height: 25px;
+        font-weight: bold;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        svg {
+          margin-right: 10px;
+          path {
+            fill: $black;
+          }
+        }
+        h3 {
+          display: none;
+        }
+        &:hover,
+        &:active {
+          color: $pk;
+          background-color: transparent;
+          svg {
+            path {
+              fill: $pk;
+            }
+          }
+        }
+      }
     }
     h1 {
       display: none;
     }
     .yp {
       display: block;
+      text-align: center;
     }
     .hamburger div {
       display: none;
@@ -174,16 +378,210 @@ nav {
   .hod {
     visibility: hidden;
   }
+  .current-list {
+    background: transparent;
+    color: $pk;
+    svg {
+      path {
+        fill: $pk;
+      }
+    }
+  }
+  #events {
+    margin-top: 150px;
+  }
+  .page_lens {
+    display: flex;
+  }
+
+  // MAIN_CONTAINER 768PX
+  .main_container {
+    display: flex;
+
+    .nav2 {
+      max-height: 90px;
+      width: 90%;
+      padding: 35px 24px 15px 24px;
+      position: fixed;
+      right: 0;
+      background-color: $gray;
+      display: flex;
+      z-index: 10;
+      justify-content: space-between;
+      h1 {
+        font-weight: bold;
+        font-size: 20px;
+        margin-top: 40px;
+        line-height: 27px;
+      }
+      .avatar_bell {
+        display: flex;
+        img {
+          width: 48px;
+          -o-object-fit: cover;
+          object-fit: cover;
+          height: 48px;
+          margin-right: 31px;
+        }
+        .avalon {
+          display: flex;
+          img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            margin-right: 10px;
+          }
+          h3 {
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 5px;
+            line-height: 19px;
+            letter-spacing: 0.02em;
+            span {
+              font-style: normal;
+              font-weight: 600;
+              font-size: 14px;
+              line-height: 16px;
+              color: rgba(51, 51, 51, 0.6);
+              letter-spacing: 0.04em;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #main {
+    width: 90%;
+    position: absolute;
+    right: 0;
+    margin-top: 220px;
+    .four_cards {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      // justify-content: space-between;
+      overflow: scroll;
+      .card {
+        width: 219px;
+        margin-right: 15px;
+        .icon {
+          img {
+            width: 48px;
+            height: 48px;
+          }
+        }
+      }
+    }
+
+    .barcode {
+      // display: flex;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: $shadow;
+      height: 200px;
+      margin-top: 10px;
+      margin-bottom: 30px;
+      background-color: $white;
+      position: relative;
+
+      h3 {
+        width: 42%;
+        height: 45px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        top: 76px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+        letter-spacing: 0.04em;
+        position: absolute;
+        background-color: $gray;
+      }
+      .search {
+        position: relative;
+        input {
+          background-color: $gray;
+          margin-top: 0;
+          width: 40%;
+          margin-left: 180px;
+          border-radius: 5px;
+          padding-left: 50px;
+        }
+
+        #abs {
+          position: absolute;
+          width: 35px;
+          top: 6px;
+          left: 6px;
+          height: 35px;
+        }
+      }
+      img {
+        right: 140px;
+        width: 45px;
+        height: 45px;
+      }
+      select {
+        width: 42%;
+        position: absolute;
+        right: 16px;
+        top: 76px;
+        border: 5px;
+        padding: 0 10px;
+        height: 45px;
+        border-radius: 5px;
+      }
+    }
+  }
 }
 
+@media (max-width: 560px) {
+  .ghost_list {
+    display: none;
+  }
+}
 @media (min-width: 1024px) {
   nav {
-    @include flex-box(space-between, 280px);
+    @include flex-box(space-between, 20%);
     flex-direction: column;
     background-color: $white;
     padding: 25px;
     min-height: 100vh;
     box-shadow: $shadow;
+    ul {
+      a {
+        margin: 10px 0;
+        display: flex;
+        padding: 15px 20px;
+        font-size: 18px;
+        line-height: 25px;
+        font-weight: bold;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        svg {
+          margin-right: 10px;
+          path {
+            fill: $black;
+          }
+        }
+        h3 {
+          display: block;
+        }
+        &:hover,
+        &:active {
+          color: $white;
+          background-color: $pk;
+          svg {
+            path {
+              fill: $white;
+            }
+          }
+        }
+      }
+    }
     h1 {
       font-size: 40px;
       display: block;
@@ -197,8 +595,64 @@ nav {
       }
     }
   }
+  #events {
+    right: 40px;
+  }
+  .current-list {
+    color: white;
+    background-color: $pk;
+    svg {
+      path {
+        fill: $white;
+      }
+    }
+  }
+
+  .main_container {
+    .nav2 {
+      width: 80%;
+      padding: 40px 40px 20px 40px;
+    }
+  }
+  #main {
+    position: absolute;
+    right: 0;
+    width: 80%;
+    padding: 0 30px;
+    .four_cards {
+      // overflow: hidden;
+      .card {
+        width: 218px;
+        .icon {
+        }
+      }
+    }
+  }
 }
 
+@media (min-width: 1224px) {
+  #main {
+    overflow: hidden;
+    .four_cards {
+      .card {
+        width: 213px;
+      }
+    }
+    .barcode {
+      width: 70%;
+    }
+  }
+}
+// @media (min-width: 1194px) {
+//   #main {
+//     overflow: hidden;
+//     .four_cards {
+//       .card {
+//         width: 230px;
+//       }
+//     }
+//   }
+// }
 @keyframes navLinkFade {
   from {
     opacity: 0;

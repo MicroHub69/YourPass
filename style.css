@@ -11,7 +11,13 @@
 body {
   background-color: #f4f4f4;
   max-width: 1440px;
-  margin: 0 auto;
+  margin: 0 auto !important;
+}
+
+h1,
+h2,
+h3 {
+  color: #333333;
 }
 
 h4 {
@@ -98,13 +104,8 @@ input {
   -webkit-box-flex: 0;
       -ms-flex: none;
           flex: none;
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
   border: 0;
   outline: 0;
-  -ms-flex-positive: 0;
-      flex-grow: 0;
   margin: 8px 0px;
 }
 
@@ -160,9 +161,12 @@ nav {
   width: 100%;
   height: auto;
   background-color: #fff;
-  padding: 25px 20px;
   -webkit-box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.12);
           box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.12);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 
 nav .avatar {
@@ -201,7 +205,6 @@ nav ul a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 15px 20px;
   font-size: 18px;
   line-height: 25px;
   font-weight: bold;
@@ -244,7 +247,120 @@ nav .hamburger {
   margin-top: 7px;
 }
 
+#events {
+  position: absolute;
+  right: 20px;
+  background-color: #d982aa;
+  color: #fff;
+  height: 45px;
+  width: 159px;
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+#events::before {
+  content: "+";
+  font-size: 20px;
+  margin-right: 12px;
+  font-weight: 600;
+  color: #fff;
+}
+
+#main {
+  margin-top: 150px;
+  padding: 0 20px;
+}
+
+#main .four_cards .card {
+  background-color: #fff;
+  -webkit-box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.08), 0px 2px 4px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.08), 0px 2px 4px rgba(0, 0, 0, 0.08);
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 13px;
+}
+
+#main .four_cards .card .icon img {
+  width: 48px;
+  height: 48px;
+}
+
+#main .four_cards .card .icon h2 {
+  margin-top: 56px;
+  font-size: 40px;
+  font-weight: 700;
+  margin-left: 15px;
+}
+
+#main .four_cards .card .icon h3 {
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+#main .four_cards .card .icon select {
+  background-color: #f4f4f4;
+  width: 67px;
+  height: 24px;
+  border: 0;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+#main .check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 43px;
+}
+
+#main .check .check_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 52%;
+}
+
+#main .check input {
+  width: 20px;
+  height: 20px;
+}
+
+#main .check h2 {
+  margin-top: 7px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: rgba(51, 51, 51, 0.8);
+}
+
 @media (max-width: 767px) {
+  nav {
+    padding: 25px 20px;
+  }
+  .main_container {
+    margin-top: 130px;
+    padding: 0 20px;
+  }
+  .main_container .nav2 h2 {
+    margin-bottom: 20px;
+  }
+  .avatar_bell {
+    display: none;
+  }
   nav ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -259,8 +375,8 @@ nav .hamburger {
     top: 70px;
     left: 0;
     padding-bottom: 45px;
-    -webkit-transform: translateX(-768px);
-            transform: translateX(-768px);
+    -webkit-transform: translateX(768px);
+            transform: translateX(768px);
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
   }
@@ -315,6 +431,79 @@ nav .hamburger {
   .current-list svg path {
     fill: #d982aa;
   }
+  .barcode {
+    padding: 15px;
+    border-radius: 5px;
+    -webkit-box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.12);
+            box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.12);
+    height: 200px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    position: relative;
+  }
+  .barcode h3 {
+    width: 42%;
+    height: 45px;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 5px;
+    top: 76px;
+    position: absolute;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.04em;
+    background-color: #f4f4f4;
+  }
+  .barcode .search {
+    position: relative;
+  }
+  .barcode .search input {
+    background-color: #f4f4f4;
+    margin-top: 0;
+    border-radius: 5px;
+    padding-left: 50px;
+    width: 90%;
+  }
+  .barcode .search #abs {
+    position: absolute;
+    width: 22px;
+    top: 6px;
+    left: 6px;
+    height: 22px;
+  }
+  .barcode img {
+    height: 45px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 45px;
+  }
+  .barcode select {
+    width: 42%;
+    position: absolute;
+    right: 16px;
+    top: 76px;
+    border: 5px;
+    padding: 0 10px;
+    height: 45px;
+    border-radius: 5px;
+  }
+  #main .check {
+    margin-top: 85px;
+  }
+  #main .check .check_wrap {
+    width: 45%;
+  }
 }
 
 @media (min-width: 768px) {
@@ -331,21 +520,224 @@ nav .hamburger {
         -ms-flex-direction: column;
             flex-direction: column;
     position: relative;
+    min-height: 100vh;
+    padding: 25px 0;
+    position: fixed;
   }
   nav ul {
     margin-top: 0px;
+  }
+  nav ul a {
+    margin: 10px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 15px 0px 15px 30px;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: bold;
+    border-radius: 5px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  nav ul a svg {
+    margin-right: 10px;
+  }
+  nav ul a svg path {
+    fill: #333333;
+  }
+  nav ul a h3 {
+    display: none;
+  }
+  nav ul a:hover, nav ul a:active {
+    color: #d982aa;
+    background-color: transparent;
+  }
+  nav ul a:hover svg path, nav ul a:active svg path {
+    fill: #d982aa;
   }
   nav h1 {
     display: none;
   }
   nav .yp {
     display: block;
+    text-align: center;
   }
   nav .hamburger div {
     display: none;
   }
   .hod {
     visibility: hidden;
+  }
+  .current-list {
+    background: transparent;
+    color: #d982aa;
+  }
+  .current-list svg path {
+    fill: #d982aa;
+  }
+  #events {
+    margin-top: 150px;
+  }
+  .page_lens {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .main_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .main_container .nav2 {
+    max-height: 90px;
+    width: 90%;
+    padding: 35px 24px 15px 24px;
+    position: fixed;
+    right: 0;
+    background-color: #f4f4f4;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 10;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .main_container .nav2 h1 {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 40px;
+    line-height: 27px;
+  }
+  .main_container .nav2 .avatar_bell {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .main_container .nav2 .avatar_bell img {
+    width: 48px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 48px;
+    margin-right: 31px;
+  }
+  .main_container .nav2 .avatar_bell .avalon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .main_container .nav2 .avatar_bell .avalon img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  .main_container .nav2 .avatar_bell .avalon h3 {
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 5px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+  }
+  .main_container .nav2 .avatar_bell .avalon h3 span {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba(51, 51, 51, 0.6);
+    letter-spacing: 0.04em;
+  }
+  #main {
+    width: 90%;
+    position: absolute;
+    right: 0;
+    margin-top: 220px;
+  }
+  #main .four_cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    overflow: scroll;
+  }
+  #main .four_cards .card {
+    width: 219px;
+    margin-right: 15px;
+  }
+  #main .four_cards .card .icon img {
+    width: 48px;
+    height: 48px;
+  }
+  #main .barcode {
+    padding: 15px;
+    border-radius: 5px;
+    -webkit-box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.12);
+            box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.12);
+    height: 200px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    position: relative;
+  }
+  #main .barcode h3 {
+    width: 42%;
+    height: 45px;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 5px;
+    top: 76px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.04em;
+    position: absolute;
+    background-color: #f4f4f4;
+  }
+  #main .barcode .search {
+    position: relative;
+  }
+  #main .barcode .search input {
+    background-color: #f4f4f4;
+    margin-top: 0;
+    width: 40%;
+    margin-left: 180px;
+    border-radius: 5px;
+    padding-left: 50px;
+  }
+  #main .barcode .search #abs {
+    position: absolute;
+    width: 35px;
+    top: 6px;
+    left: 6px;
+    height: 35px;
+  }
+  #main .barcode img {
+    right: 140px;
+    width: 45px;
+    height: 45px;
+  }
+  #main .barcode select {
+    width: 42%;
+    position: absolute;
+    right: 16px;
+    top: 76px;
+    border: 5px;
+    padding: 0 10px;
+    height: 45px;
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 560px) {
+  .ghost_list {
+    display: none;
   }
 }
 
@@ -357,7 +749,7 @@ nav .hamburger {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 280px;
+    width: 20%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -368,6 +760,35 @@ nav .hamburger {
     -webkit-box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.12);
             box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.12);
   }
+  nav ul a {
+    margin: 10px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 15px 20px;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: bold;
+    border-radius: 5px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  nav ul a svg {
+    margin-right: 10px;
+  }
+  nav ul a svg path {
+    fill: #333333;
+  }
+  nav ul a h3 {
+    display: block;
+  }
+  nav ul a:hover, nav ul a:active {
+    color: #fff;
+    background-color: #d982aa;
+  }
+  nav ul a:hover svg path, nav ul a:active svg path {
+    fill: #fff;
+  }
   nav h1 {
     font-size: 40px;
     display: block;
@@ -377,6 +798,41 @@ nav .hamburger {
   }
   nav ul a {
     margin: 10px 0;
+  }
+  #events {
+    right: 40px;
+  }
+  .current-list {
+    color: white;
+    background-color: #d982aa;
+  }
+  .current-list svg path {
+    fill: #fff;
+  }
+  .main_container .nav2 {
+    width: 80%;
+    padding: 40px 40px 20px 40px;
+  }
+  #main {
+    position: absolute;
+    right: 0;
+    width: 80%;
+    padding: 0 30px;
+  }
+  #main .four_cards .card {
+    width: 218px;
+  }
+}
+
+@media (min-width: 1224px) {
+  #main {
+    overflow: hidden;
+  }
+  #main .four_cards .card {
+    width: 213px;
+  }
+  #main .barcode {
+    width: 70%;
   }
 }
 
