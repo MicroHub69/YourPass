@@ -138,32 +138,48 @@ nav {
       }
     }
   }
-  .check {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 43px;
-    .check_wrap {
-      display: flex;
-      justify-content: space-between;
-      width: 52%;
-    }
-    input {
-      width: 20px;
-      height: 20px;
-    }
-    h2 {
-      margin-top: 7px;
-      // font-family: Nunito;
-      // font-style: normal;
-      font-weight: bold;
-      font-size: 14px;
-      line-height: 19px;
-      text-transform: uppercase;
-      color: rgba(51, 51, 51, 0.8);
+}
+.s_step {
+  padding: 0 20px;
+
+  .table_head {
+    background-color: $white;
+    border-radius: 5px;
+    padding: 16px;
+    .head_input {
+      .c_barcode {
+        display: flex;
+        justify-content: space-between;
+        h3 {
+          display: none;
+        }
+        .m_input {
+          position: relative;
+          width: 85%;
+          input {
+            background-color: $gray;
+            margin-top: 0;
+            padding-left: 45px;
+          }
+          .abss {
+            width: 35px;
+            position: absolute;
+            height: 35px;
+            left: 10px;
+            top: 16px;
+          }
+        }
+        img {
+          width: 45px;
+          height: 45px;
+        }
+      }
+
+      select {
+      }
     }
   }
 }
-
 // MAX WIDTH STARTs FROM HERE
 @media (max-width: 767px) {
   nav {
@@ -253,74 +269,6 @@ nav {
         fill: $pk;
       }
     }
-  }
-
-  .barcode {
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: $shadow;
-    height: 200px;
-    margin-top: 10px;
-    margin-bottom: 30px;
-    background-color: $white;
-    position: relative;
-    h3 {
-      width: 42%;
-      height: 45px;
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 5px;
-      top: 76px;
-      position: absolute;
-      font-weight: 600;
-      font-size: 14px;
-      line-height: 19px;
-      letter-spacing: 0.04em;
-      background-color: $gray;
-    }
-    .search {
-      position: relative;
-      input {
-        background-color: $gray;
-        margin-top: 0;
-        border-radius: 5px;
-        padding-left: 50px;
-        width: 90%;
-      }
-
-      #abs {
-        position: absolute;
-        width: 22px;
-        top: 6px;
-        left: 6px;
-        height: 22px;
-      }
-    }
-    img {
-      height: 45px;
-      position: absolute;
-      top: 15px;
-      right: 15px;
-      width: 45px;
-    }
-    select {
-      width: 42%;
-      position: absolute;
-      right: 16px;
-      top: 76px;
-      border: 5px;
-      padding: 0 10px;
-      height: 45px;
-      border-radius: 5px;
-    }
-  }
-  #main .check {
-    margin-top: 85px;
-  }
-  #main .check .check_wrap {
-    width: 45%;
   }
 }
 
@@ -472,67 +420,26 @@ nav {
         }
       }
     }
+  }
 
-    .barcode {
-      // display: flex;
-      padding: 15px;
-      border-radius: 5px;
-      box-shadow: $shadow;
-      height: 200px;
-      margin-top: 10px;
-      margin-bottom: 30px;
-      background-color: $white;
-      position: relative;
-
-      h3 {
-        width: 42%;
-        height: 45px;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 5px;
-        top: 76px;
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 19px;
-        letter-spacing: 0.04em;
-        position: absolute;
-        background-color: $gray;
-      }
-      .search {
-        position: relative;
-        input {
-          background-color: $gray;
-          margin-top: 0;
-          width: 40%;
-          margin-left: 180px;
-          border-radius: 5px;
-          padding-left: 50px;
+  .s_step {
+    .table_head {
+      .head_input {
+        .c_barcode {
+          h3 {
+          }
+          .m_input {
+            input {
+            }
+            .abss {
+            }
+          }
+          img {
+          }
         }
 
-        #abs {
-          position: absolute;
-          width: 35px;
-          top: 6px;
-          left: 6px;
-          height: 35px;
+        select {
         }
-      }
-      img {
-        right: 140px;
-        width: 45px;
-        height: 45px;
-      }
-      select {
-        width: 42%;
-        position: absolute;
-        right: 16px;
-        top: 76px;
-        border: 5px;
-        padding: 0 10px;
-        height: 45px;
-        border-radius: 5px;
       }
     }
   }
@@ -628,31 +535,91 @@ nav {
       }
     }
   }
+
+  .s_step {
+    width: 80%;
+    position: absolute;
+    right: 0;
+    padding: 0 30px;
+    // background-color: yellow;
+    margin-top: 400px;
+    .table_head {
+      background-color: $white;
+      padding: 17px;
+      border-radius: 5px;
+      margin-bottom: 40px;
+      width: 73%;
+      .head_input {
+        display: flex;
+        justify-content: space-between;
+
+        .c_barcode {
+          display: flex;
+          width: 76%;
+          justify-content: space-between;
+          h3 {
+            width: 108px;
+            height: 45px;
+            background-color: $gray;
+            border-radius: 5px;
+            text-align: center;
+            padding-top: 13px;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 19px;
+          }
+          .m_input {
+            position: relative;
+            input {
+              max-width: 300px;
+              height: 44px;
+              background-color: $gray;
+              border-radius: 5px;
+              padding-left: 45px;
+              margin-top: 0;
+            }
+            .abss {
+              left: 10px;
+              top: 8px;
+              position: absolute;
+              width: 30px;
+              height: 30px;
+            }
+          }
+          img {
+            width: 45px;
+            height: 45px;
+          }
+        }
+        select {
+          width: 114px;
+          height: 45px;
+          border: 0;
+          border-radius: 5px;
+          padding: 10px;
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 1224px) {
   #main {
-    overflow: hidden;
     .four_cards {
+      overflow: hidden;
       .card {
-        width: 213px;
+        width: 221px;
       }
     }
-    .barcode {
-      width: 70%;
-    }
+  }
+  .s_step .table_head {
+    width: 70%;
+  }
+  .s_step .table_head .head_input .c_barcode {
+    width: 65%;
   }
 }
-// @media (min-width: 1194px) {
-//   #main {
-//     overflow: hidden;
-//     .four_cards {
-//       .card {
-//         width: 230px;
-//       }
-//     }
-//   }
-// }
+
 @keyframes navLinkFade {
   from {
     opacity: 0;
