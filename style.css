@@ -14,12 +14,6 @@ body {
   margin: 0 auto !important;
 }
 
-h1,
-h2,
-h3 {
-  color: #333333;
-}
-
 h4 {
   font-family: Nunito;
   font-style: normal;
@@ -321,6 +315,9 @@ nav .hamburger {
   background-color: #fff;
   border-radius: 5px;
   padding: 16px;
+  position: relative;
+  margin-bottom: 20px;
+  height: 210px;
 }
 
 .s_step .table_head .head_input .c_barcode {
@@ -338,26 +335,148 @@ nav .hamburger {
 
 .s_step .table_head .head_input .c_barcode .m_input {
   position: relative;
-  width: 85%;
+  width: 83%;
 }
 
 .s_step .table_head .head_input .c_barcode .m_input input {
   background-color: #f4f4f4;
   margin-top: 0;
+  height: 45px;
   padding-left: 45px;
 }
 
 .s_step .table_head .head_input .c_barcode .m_input .abss {
-  width: 35px;
+  width: 30px;
   position: absolute;
-  height: 35px;
+  height: 30px;
   left: 10px;
-  top: 16px;
+  top: 10px;
 }
 
 .s_step .table_head .head_input .c_barcode img {
-  width: 45px;
+  width: 46px;
+  height: 46px;
+}
+
+.s_step .table_head .head_input .act-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 20px;
+}
+
+.s_step .table_head .head_input .act-2 h3 {
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  border-radius: 5px;
+  letter-spacing: 0.04em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f4f4f4;
   height: 45px;
+}
+
+.s_step .table_head .head_input .act-2 select {
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 0;
+  border-radius: 5px;
+  background-color: #f4f4f4;
+  height: 45px;
+}
+
+.s_step .table_head .head_input .it_head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 30px;
+}
+
+.s_step .table_head .head_input .it_head .tt-h {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 37%;
+}
+
+.s_step .table_head .head_input .it_head .tt-h input {
+  width: 20px;
+  height: 20px;
+}
+
+.s_step .table_head .head_input .it_head h3 {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 19px;
+  color: rgba(51, 51, 51, 0.8);
+}
+
+.s_step .tt-1 {
+  background-color: #fff;
+  margin-top: 20px;
+  border-radius: 5px;
+  padding: 16px;
+}
+
+.s_step .tt-1 ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 15px auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.s_step .tt-1 ul li .tt-table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 64%;
+}
+
+.s_step .tt-1 ul li .tt-table input {
+  margin: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.s_step .tt-1 ul li h3 {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 0.02em;
+  color: #333333;
 }
 
 @media (max-width: 767px) {
@@ -436,6 +555,9 @@ nav .hamburger {
   .nav-active {
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
+  }
+  .g_list {
+    display: none;
   }
   .current-list {
     background: transparent;
@@ -607,6 +729,61 @@ nav .hamburger {
     width: 48px;
     height: 48px;
   }
+  .s_step .ff_side {
+    width: 90%;
+    padding: 0 20px;
+    margin-top: 405px;
+    position: absolute;
+    right: 0;
+    height: 135px;
+  }
+  .s_step .ff_side .table_head {
+    height: 145px;
+  }
+  .s_step .ff_side .table_head .head_input {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .s_step .ff_side .table_head .head_input .c_barcode h3 {
+    display: block;
+    width: 108px;
+    height: 45px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    text-align: center;
+    margin-right: 10px;
+    padding-top: 13px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .s_step .ff_side .table_head .head_input .c_barcode .m_input input {
+    max-width: 250px;
+  }
+  .s_step .ff_side .table_head .head_input .act-2 {
+    margin-top: 0;
+  }
+  .s_step .ff_side .table_head .head_input .act-2 h3 {
+    display: none;
+  }
+  .s_step .ff_side .table_head .it_head {
+    position: absolute;
+    bottom: 0;
+    width: 95%;
+  }
+  .s_step .ff_side .table_head .it_head .tt-h {
+    width: 51%;
+  }
+  .s_step .tt-1 ul li .tt-table {
+    width: 64%;
+  }
+  .m-action {
+    display: none;
+  }
 }
 
 @media (max-width: 560px) {
@@ -696,21 +873,20 @@ nav .hamburger {
   #main .four_cards .card {
     width: 218px;
   }
-  .s_step {
+  .s_step .ff_side {
     width: 80%;
     position: absolute;
     right: 0;
     padding: 0 30px;
-    margin-top: 400px;
   }
-  .s_step .table_head {
+  .s_step .ff_side .table_head {
     background-color: #fff;
     padding: 17px;
     border-radius: 5px;
-    margin-bottom: 40px;
-    width: 73%;
+    margin-bottom: 25px;
+    width: 70%;
   }
-  .s_step .table_head .head_input {
+  .s_step .ff_side .table_head .head_input {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -718,54 +894,71 @@ nav .hamburger {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .s_step .table_head .head_input .c_barcode {
+  .s_step .ff_side .table_head .head_input .c_barcode {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 76%;
+    width: 70%;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .s_step .table_head .head_input .c_barcode h3 {
+  .s_step .ff_side .table_head .head_input .c_barcode h3 {
     width: 108px;
     height: 45px;
     background-color: #f4f4f4;
     border-radius: 5px;
     text-align: center;
+    margin-right: 10px;
     padding-top: 13px;
     font-weight: 600;
     font-size: 14px;
     line-height: 19px;
   }
-  .s_step .table_head .head_input .c_barcode .m_input {
+  .s_step .ff_side .table_head .head_input .c_barcode .m_input {
     position: relative;
   }
-  .s_step .table_head .head_input .c_barcode .m_input input {
+  .s_step .ff_side .table_head .head_input .c_barcode .m_input input {
     max-width: 300px;
+    margin-right: 10px;
     height: 44px;
     background-color: #f4f4f4;
     border-radius: 5px;
     padding-left: 45px;
     margin-top: 0;
   }
-  .s_step .table_head .head_input .c_barcode .m_input .abss {
+  .s_step .ff_side .table_head .head_input .c_barcode .m_input .abss {
     left: 10px;
     top: 8px;
     position: absolute;
     width: 30px;
     height: 30px;
   }
-  .s_step .table_head .head_input .c_barcode img {
+  .s_step .ff_side .table_head .head_input .c_barcode img {
     width: 45px;
     height: 45px;
   }
-  .s_step .table_head .head_input select {
+  .s_step .ff_side .table_head .head_input select {
     width: 114px;
     height: 45px;
     border: 0;
     border-radius: 5px;
     padding: 10px;
+  }
+  .s_step .ff_side .tt-1 {
+    width: 70%;
+  }
+  .s_step .ff_side .tt-1 ul li .tt-table {
+    width: 77%;
+  }
+  .s_step .aside_wrapper {
+    width: 20%;
+    position: absolute;
+    top: 400px;
+    right: 40px;
+  }
+  .s_step .ff_side .table_head .it_head .tt-h {
+    width: 58%;
   }
 }
 
@@ -776,11 +969,19 @@ nav .hamburger {
   #main .four_cards .card {
     width: 221px;
   }
-  .s_step .table_head {
+  .s_step {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .s_step .tt-1 {
     width: 70%;
   }
-  .s_step .table_head .head_input .c_barcode {
-    width: 65%;
+  .s_step .table_head {
+    width: 70%;
   }
 }
 

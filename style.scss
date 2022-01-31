@@ -139,6 +139,7 @@ nav {
     }
   }
 }
+
 .s_step {
   padding: 0 20px;
 
@@ -146,6 +147,9 @@ nav {
     background-color: $white;
     border-radius: 5px;
     padding: 16px;
+    position: relative;
+    margin-bottom: 20px;
+    height: 210px;
     .head_input {
       .c_barcode {
         display: flex;
@@ -155,27 +159,110 @@ nav {
         }
         .m_input {
           position: relative;
-          width: 85%;
+          width: 83%;
           input {
             background-color: $gray;
             margin-top: 0;
+            height: 45px;
             padding-left: 45px;
           }
           .abss {
-            width: 35px;
+            width: 30px;
             position: absolute;
-            height: 35px;
+            height: 30px;
             left: 10px;
-            top: 16px;
+            top: 10px;
           }
         }
         img {
-          width: 45px;
+          width: 46px;
+          height: 46px;
+        }
+      }
+      .act-2 {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        h3 {
+          width: 150px;
+          display: flex;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 19px;
+          border-radius: 5px;
+          letter-spacing: 0.04em;
+
+          justify-content: center;
+          align-items: center;
+          background-color: $gray;
+          height: 45px;
+        }
+        select {
+          width: 150px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 0;
+          border-radius: 5px;
+
+          background-color: $gray;
           height: 45px;
         }
       }
+      .it_head {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+        .tt-h {
+          display: flex;
+          justify-content: space-between;
+          width: 37%;
+          input {
+            width: 20px;
+            height: 20px;
+          }
+        }
+        h3 {
+          margin-top: 10px;
 
-      select {
+          font-weight: bold;
+          font-size: 14px;
+          line-height: 19px;
+
+          color: rgba(51, 51, 51, 0.8);
+        }
+      }
+    }
+  }
+
+  .tt-1 {
+    background-color: $white;
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 16px;
+    ul {
+      li {
+        display: flex;
+        margin: 15px auto;
+        justify-content: space-between;
+        .tt-table {
+          display: flex;
+          justify-content: space-between;
+          width: 64%;
+          input {
+            margin: 0;
+            width: 16px;
+            height: 16px;
+          }
+        }
+        h3 {
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 19px;
+          letter-spacing: 0.02em;
+
+          color: #333333;
+        }
       }
     }
   }
@@ -260,7 +347,9 @@ nav {
     // display: flex;
     transform: translateX(0px);
   }
-
+  .g_list {
+    display: none;
+  }
   .current-list {
     background: transparent;
     color: $pk;
@@ -342,7 +431,7 @@ nav {
     display: flex;
   }
 
-  // MAIN_CONTAINER 768PX
+  //================ MAIN_CONTAINER 768PX
   .main_container {
     display: flex;
 
@@ -423,25 +512,70 @@ nav {
   }
 
   .s_step {
-    .table_head {
-      .head_input {
-        .c_barcode {
-          h3 {
-          }
-          .m_input {
-            input {
+    .ff_side {
+      width: 90%;
+      padding: 0 20px;
+      margin-top: 405px;
+      position: absolute;
+      right: 0;
+      height: 135px;
+      .table_head {
+        height: 145px;
+
+        .head_input {
+          display: flex;
+          justify-content: space-between;
+          .c_barcode {
+            h3 {
+              display: block;
+              width: 108px;
+              height: 45px;
+              background-color: #f4f4f4;
+              border-radius: 5px;
+              text-align: center;
+              margin-right: 10px;
+              padding-top: 13px;
+              font-weight: 600;
+              font-size: 14px;
+              line-height: 19px;
             }
-            .abss {
+            .m_input {
+              input {
+                max-width: 250px;
+              }
+              .abss {
+              }
+            }
+            img {
             }
           }
-          img {
+
+          .act-2 {
+            margin-top: 0;
+            h3 {
+              display: none;
+            }
+
+            select {
+            }
           }
         }
-
-        select {
+        .it_head {
+          position: absolute;
+          bottom: 0;
+          width: 95%;
+          .tt-h {
+            width: 51%;
+          }
         }
       }
     }
+  }
+  .s_step .tt-1 ul li .tt-table {
+    width: 64%;
+  }
+  .m-action {
+    display: none;
   }
 }
 
@@ -530,76 +664,100 @@ nav {
       // overflow: hidden;
       .card {
         width: 218px;
-        .icon {
-        }
       }
     }
   }
 
   .s_step {
-    width: 80%;
-    position: absolute;
-    right: 0;
-    padding: 0 30px;
-    // background-color: yellow;
-    margin-top: 400px;
-    .table_head {
-      background-color: $white;
-      padding: 17px;
-      border-radius: 5px;
-      margin-bottom: 40px;
-      width: 73%;
-      .head_input {
-        display: flex;
-        justify-content: space-between;
+    .ff_side {
+      width: 80%;
+      position: absolute;
+      right: 0;
+      padding: 0 30px;
 
-        .c_barcode {
+      .table_head {
+        background-color: $white;
+        padding: 17px;
+        border-radius: 5px;
+        margin-bottom: 25px;
+        width: 70%;
+        .head_input {
           display: flex;
-          width: 76%;
           justify-content: space-between;
-          h3 {
-            width: 108px;
-            height: 45px;
-            background-color: $gray;
-            border-radius: 5px;
-            text-align: center;
-            padding-top: 13px;
-            font-weight: 600;
-            font-size: 14px;
-            line-height: 19px;
-          }
-          .m_input {
-            position: relative;
-            input {
-              max-width: 300px;
-              height: 44px;
+
+          .c_barcode {
+            display: flex;
+            width: 70%;
+            justify-content: space-between;
+            h3 {
+              width: 108px;
+              height: 45px;
               background-color: $gray;
               border-radius: 5px;
-              padding-left: 45px;
-              margin-top: 0;
+              text-align: center;
+              margin-right: 10px;
+              padding-top: 13px;
+              font-weight: 600;
+              font-size: 14px;
+              line-height: 19px;
             }
-            .abss {
-              left: 10px;
-              top: 8px;
-              position: absolute;
-              width: 30px;
-              height: 30px;
+            .m_input {
+              position: relative;
+              input {
+                max-width: 300px;
+                margin-right: 10px;
+                height: 44px;
+                background-color: $gray;
+                border-radius: 5px;
+                padding-left: 45px;
+                margin-top: 0;
+              }
+              .abss {
+                left: 10px;
+                top: 8px;
+                position: absolute;
+                width: 30px;
+                height: 30px;
+              }
+            }
+            img {
+              width: 45px;
+              height: 45px;
             }
           }
-          img {
-            width: 45px;
+          select {
+            width: 114px;
             height: 45px;
+            border: 0;
+            border-radius: 5px;
+            padding: 10px;
           }
         }
-        select {
-          width: 114px;
-          height: 45px;
-          border: 0;
-          border-radius: 5px;
-          padding: 10px;
+      }
+
+      .tt-1 {
+        width: 70%;
+        ul {
+          li {
+            .tt-table {
+              width: 77%;
+            }
+          }
         }
       }
     }
+
+    .aside_wrapper {
+      width: 20%;
+      position: absolute;
+      top: 400px;
+      right: 40px;
+      h3 {
+      }
+    }
+  }
+  .s_step .ff_side .table_head .it_head .tt-h {
+    width: 58%;
   }
 }
 
@@ -612,11 +770,17 @@ nav {
       }
     }
   }
+  .s_step {
+    justify-content: space-between;
+    display: flex;
+    .tt-1 {
+      width: 70%;
+    }
+    .aside_wrapper {
+    }
+  }
   .s_step .table_head {
     width: 70%;
-  }
-  .s_step .table_head .head_input .c_barcode {
-    width: 65%;
   }
 }
 
