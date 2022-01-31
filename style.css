@@ -479,6 +479,69 @@ nav .hamburger {
   color: #333333;
 }
 
+.s_step .aside_wrapper {
+  background-color: #fff;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 25px 16px 0 16px;
+}
+
+.s_step .aside_wrapper .upcoming h2 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.s_step .aside_wrapper .upcoming .wrap_event {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.s_step .aside_wrapper .upcoming .wrap_event .event {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.s_step .aside_wrapper .upcoming .wrap_event .event img {
+  width: 60px;
+  height: 60px;
+  margin-right: 12px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.s_step .aside_wrapper .upcoming .wrap_event .event .lct h3 {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+}
+
+.s_step .aside_wrapper .upcoming .wrap_event .event .lct p {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 0.02em;
+}
+
+.s_step .aside_wrapper .upcoming .wrap_event .event .lct p img {
+  width: 17px;
+  height: 17px;
+  margin-right: 5px;
+}
+
 @media (max-width: 767px) {
   nav {
     padding: 25px 20px;
@@ -646,6 +709,10 @@ nav .hamburger {
     display: -ms-flexbox;
     display: flex;
   }
+  .s_step .aside_wrapper {
+    margin-left: 71px;
+    margin-top: 942px;
+  }
   .main_container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -780,6 +847,9 @@ nav .hamburger {
   }
   .s_step .tt-1 ul li .tt-table {
     width: 64%;
+  }
+  .s_step .aside_wrapper .upcoming .wrap_event .event {
+    width: 33%;
   }
   .m-action {
     display: none;
@@ -952,13 +1022,19 @@ nav .hamburger {
     width: 77%;
   }
   .s_step .aside_wrapper {
-    width: 20%;
+    width: 21%;
     position: absolute;
     top: 400px;
-    right: 40px;
+    right: 30px;
   }
   .s_step .ff_side .table_head .it_head .tt-h {
     width: 58%;
+  }
+  .s_step .aside_wrapper {
+    margin-top: 5px;
+  }
+  .s_step .aside_wrapper .upcoming .wrap_event .event {
+    width: 100%;
   }
 }
 

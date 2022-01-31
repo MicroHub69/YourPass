@@ -266,6 +266,62 @@ nav {
       }
     }
   }
+
+  // =======UPCOMING EVENTS
+  .aside_wrapper {
+    background-color: $white;
+    border-radius: 5px;
+    margin-top: 20px;
+
+    padding: 25px 16px 0 16px;
+    .upcoming {
+      h2 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 25px;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+      }
+      .wrap_event {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .event {
+          display: flex;
+          margin-bottom: 20px;
+          img {
+            width: 60px;
+            height: 60px;
+            margin-right: 12px;
+            object-fit: cover;
+          }
+          .lct {
+            h3 {
+              font-weight: bold;
+              font-size: 16px;
+              line-height: 22px;
+
+              letter-spacing: 0.02em;
+              text-transform: capitalize;
+            }
+            p {
+              font-weight: 600;
+              font-size: 14px;
+              line-height: 19px;
+
+              letter-spacing: 0.02em;
+              img {
+                width: 17px;
+                height: 17px;
+                margin-right: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 // MAX WIDTH STARTs FROM HERE
 @media (max-width: 767px) {
@@ -430,7 +486,11 @@ nav {
   .page_lens {
     display: flex;
   }
+  .s_step .aside_wrapper {
+    margin-left: 71px;
 
+    margin-top: 942px;
+  }
   //================ MAIN_CONTAINER 768PX
   .main_container {
     display: flex;
@@ -573,6 +633,9 @@ nav {
   }
   .s_step .tt-1 ul li .tt-table {
     width: 64%;
+  }
+  .s_step .aside_wrapper .upcoming .wrap_event .event {
+    width: 33%;
   }
   .m-action {
     display: none;
@@ -748,16 +811,22 @@ nav {
     }
 
     .aside_wrapper {
-      width: 20%;
+      width: 21%;
       position: absolute;
       top: 400px;
-      right: 40px;
+      right: 30px;
       h3 {
       }
     }
   }
   .s_step .ff_side .table_head .it_head .tt-h {
     width: 58%;
+  }
+  .s_step .aside_wrapper {
+    margin-top: 5px;
+  }
+  .s_step .aside_wrapper .upcoming .wrap_event .event {
+    width: 100%;
   }
 }
 
