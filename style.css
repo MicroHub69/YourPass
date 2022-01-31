@@ -516,7 +516,7 @@ nav .hamburger {
 .s_step .aside_wrapper .upcoming .wrap_event .event img {
   width: 60px;
   height: 60px;
-  margin-right: 12px;
+  margin-right: 10px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -540,6 +540,14 @@ nav .hamburger {
   width: 17px;
   height: 17px;
   margin-right: 5px;
+}
+
+.s_step .map {
+  margin-top: 20px;
+}
+
+.s_step .map iframe {
+  width: 100%;
 }
 
 @media (max-width: 767px) {
