@@ -1,6 +1,11 @@
 @import "variables";
 @import "ipad";
 @import "tablet";
+body {
+  background-color: $gray;
+  max-width: 1440px;
+  margin: 0 auto !important;
+}
 
 nav {
   @include flex-box(space-between, 100%);
@@ -55,7 +60,7 @@ nav {
       &:hover,
       &:active {
         color: $white;
-        background-color: $pk;
+        background-color: rgba(217, 130, 170, 0.8);
         svg {
           path {
             fill: $white;
@@ -260,7 +265,6 @@ nav {
           font-size: 14px;
           line-height: 19px;
           letter-spacing: 0.02em;
-
           color: #333333;
         }
       }
@@ -494,20 +498,31 @@ nav {
   }
   .s_step .aside_wrapper {
     margin-left: 71px;
-
     margin-top: 942px;
+    width: 86%;
+    position: absolute;
+    right: 20px;
   }
+  .s_step .map {
+    width: 86%;
+    top: 1190px;
+    position: absolute;
+    right: 20px;
+    bottom: 7px;
+    margin-top: 20px;
+  }
+
   //================ MAIN_CONTAINER 768PX
   .main_container {
     display: flex;
-
     .nav2 {
-      max-height: 90px;
-      width: 90%;
-      padding: 35px 24px 15px 24px;
+      height: auto;
+      width: 89.9%;
+      padding: 30px 24px 15px 24px;
       position: fixed;
       right: 0;
-      background-color: $gray;
+      background-color: $white;
+      box-shadow: $shadow;
       display: flex;
       z-index: 10;
       justify-content: space-between;
@@ -565,7 +580,7 @@ nav {
       // justify-content: space-between;
       overflow: scroll;
       .card {
-        width: 219px;
+        width: 23.7%;
         margin-right: 15px;
         .icon {
           img {
@@ -609,10 +624,6 @@ nav {
               input {
                 max-width: 250px;
               }
-              .abss {
-              }
-            }
-            img {
             }
           }
 
@@ -620,9 +631,6 @@ nav {
             margin-top: 0;
             h3 {
               display: none;
-            }
-
-            select {
             }
           }
         }
@@ -683,7 +691,7 @@ nav {
         &:hover,
         &:active {
           color: $white;
-          background-color: $pk;
+          background-color: rgba(217, 130, 170, 0.8);
           svg {
             path {
               fill: $white;
@@ -705,6 +713,9 @@ nav {
       }
     }
   }
+  #last_cards {
+    display: none;
+  }
   #events {
     right: 40px;
   }
@@ -717,11 +728,15 @@ nav {
       }
     }
   }
-
+  .s_step .map {
+    width: 21%;
+    top: 885px;
+    right: 30px;
+  }
   .main_container {
     .nav2 {
-      width: 80%;
-      padding: 40px 40px 20px 40px;
+      width: 79.9%;
+      padding: 30px 40px 20px 40px;
     }
   }
   #main {
@@ -732,7 +747,7 @@ nav {
     .four_cards {
       // overflow: hidden;
       .card {
-        width: 218px;
+        width: 23.7%;
       }
     }
   }
@@ -806,6 +821,7 @@ nav {
 
       .tt-1 {
         width: 70%;
+        margin-bottom: 50px;
         ul {
           li {
             .tt-table {
@@ -821,8 +837,6 @@ nav {
       position: absolute;
       top: 400px;
       right: 30px;
-      h3 {
-      }
     }
   }
   .s_step .ff_side .table_head .it_head .tt-h {
@@ -836,12 +850,19 @@ nav {
   }
 }
 
+@media (min-width: 1124px) {
+  .s_step .map {
+    width: 21%;
+    top: 820px;
+    right: 30px;
+  }
+}
 @media (min-width: 1224px) {
   #main {
     .four_cards {
       overflow: hidden;
       .card {
-        width: 221px;
+        width: 23.7%;
       }
     }
   }
@@ -850,8 +871,6 @@ nav {
     display: flex;
     .tt-1 {
       width: 70%;
-    }
-    .aside_wrapper {
     }
   }
   .s_step .table_head {

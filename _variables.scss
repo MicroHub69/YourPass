@@ -12,7 +12,7 @@ $black: #333333;
 $white: #fff;
 $gray: #f4f4f4;
 $d-pk: #bc658d;
-$d-gray: #756c83;
+$d-gray: #be96fd;
 $danger: #e90a0a;
 $green: #4be133;
 $shadow: 2px 0px 4px rgba(0, 0, 0, 0.12);
@@ -21,11 +21,6 @@ $shadow: 2px 0px 4px rgba(0, 0, 0, 0.12);
   display: flex;
   justify-content: $justify;
   width: $width;
-}
-body {
-  background-color: $gray;
-  max-width: 1440px;
-  margin: 0 auto !important;
 }
 
 h4 {

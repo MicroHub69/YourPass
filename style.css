@@ -8,12 +8,6 @@
   font-family: "Nunito Sans", sans-serif;
 }
 
-body {
-  background-color: #f4f4f4;
-  max-width: 1440px;
-  margin: 0 auto !important;
-}
-
 h4 {
   font-family: Nunito;
   font-style: normal;
@@ -145,6 +139,12 @@ button {
   }
 }
 
+body {
+  background-color: #f4f4f4;
+  max-width: 1440px;
+  margin: 0 auto !important;
+}
+
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -217,7 +217,7 @@ nav ul a svg path {
 
 nav ul a:hover, nav ul a:active {
   color: #fff;
-  background-color: #d982aa;
+  background-color: rgba(217, 130, 170, 0.8);
 }
 
 nav ul a:hover svg path, nav ul a:active svg path {
@@ -720,6 +720,17 @@ nav .hamburger {
   .s_step .aside_wrapper {
     margin-left: 71px;
     margin-top: 942px;
+    width: 86%;
+    position: absolute;
+    right: 20px;
+  }
+  .s_step .map {
+    width: 86%;
+    top: 1190px;
+    position: absolute;
+    right: 20px;
+    bottom: 7px;
+    margin-top: 20px;
   }
   .main_container {
     display: -webkit-box;
@@ -727,12 +738,14 @@ nav .hamburger {
     display: flex;
   }
   .main_container .nav2 {
-    max-height: 90px;
-    width: 90%;
-    padding: 35px 24px 15px 24px;
+    height: auto;
+    width: 89.9%;
+    padding: 30px 24px 15px 24px;
     position: fixed;
     right: 0;
-    background-color: #f4f4f4;
+    background-color: #fff;
+    -webkit-box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.12);
+            box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.12);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -797,7 +810,7 @@ nav .hamburger {
     overflow: scroll;
   }
   #main .four_cards .card {
-    width: 219px;
+    width: 23.7%;
     margin-right: 15px;
   }
   #main .four_cards .card .icon img {
@@ -913,7 +926,7 @@ nav .hamburger {
   }
   nav ul a:hover, nav ul a:active {
     color: #fff;
-    background-color: #d982aa;
+    background-color: rgba(217, 130, 170, 0.8);
   }
   nav ul a:hover svg path, nav ul a:active svg path {
     fill: #fff;
@@ -928,6 +941,9 @@ nav .hamburger {
   nav ul a {
     margin: 10px 0;
   }
+  #last_cards {
+    display: none;
+  }
   #events {
     right: 40px;
   }
@@ -938,9 +954,14 @@ nav .hamburger {
   .current-list svg path {
     fill: #fff;
   }
+  .s_step .map {
+    width: 21%;
+    top: 885px;
+    right: 30px;
+  }
   .main_container .nav2 {
-    width: 80%;
-    padding: 40px 40px 20px 40px;
+    width: 79.9%;
+    padding: 30px 40px 20px 40px;
   }
   #main {
     position: absolute;
@@ -949,7 +970,7 @@ nav .hamburger {
     padding: 0 30px;
   }
   #main .four_cards .card {
-    width: 218px;
+    width: 23.7%;
   }
   .s_step .ff_side {
     width: 80%;
@@ -1025,6 +1046,7 @@ nav .hamburger {
   }
   .s_step .ff_side .tt-1 {
     width: 70%;
+    margin-bottom: 50px;
   }
   .s_step .ff_side .tt-1 ul li .tt-table {
     width: 77%;
@@ -1046,12 +1068,20 @@ nav .hamburger {
   }
 }
 
+@media (min-width: 1124px) {
+  .s_step .map {
+    width: 21%;
+    top: 820px;
+    right: 30px;
+  }
+}
+
 @media (min-width: 1224px) {
   #main .four_cards {
     overflow: hidden;
   }
   #main .four_cards .card {
-    width: 221px;
+    width: 23.7%;
   }
   .s_step {
     -webkit-box-pack: justify;
