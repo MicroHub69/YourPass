@@ -333,6 +333,76 @@ nav {
     }
   }
 }
+
+// =============================================
+// OVERLAY FOR ADDING EVENTS FORM AND UPLOAD IMAGE
+// ==================================================
+.overlay {
+  position: fixed;
+  top: 0;
+  // display: none;
+  right: 0;
+  width: 100%;
+  .backdrop {
+    padding: 135px 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    .wrap {
+      background-color: $white;
+      // border-radius: 5px;
+      height: auto;
+      padding: 40px 20px;
+      h2 {
+        font-weight: bold;
+        margin-bottom: 40px;
+        font-size: 20px;
+        line-height: 27px;
+        text-transform: capitalize;
+      }
+      form {
+        label {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 22px;
+          letter-spacing: 0.02em;
+          margin-top: 20px;
+          text-transform: capitalize;
+        }
+        input {
+          background-color: $gray;
+          padding: 10px;
+          margin-bottom: 30px;
+        }
+        textarea {
+          background-color: $gray;
+          max-width: 100%;
+          height: 200px;
+          width: 100%;
+          border-radius: 5px;
+          margin-bottom: 30px;
+          padding: 10px;
+          border: 0;
+        }
+        .date_time {
+          .v-date {
+            position: relative;
+            .calendar {
+              position: absolute;
+              width: 55px;
+              height: 55px;
+              bottom: 34px;
+              right: 0;
+              top: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.overlay.showevent {
+  display: block;
+}
+
 // MAX WIDTH STARTs FROM HERE
 @media (max-width: 767px) {
   nav {
@@ -495,6 +565,9 @@ nav {
   }
   .page_lens {
     display: flex;
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
   }
   .s_step .aside_wrapper {
     margin-left: 71px;
@@ -580,7 +653,7 @@ nav {
       // justify-content: space-between;
       overflow: scroll;
       .card {
-        width: 23.7%;
+        width: 30%;
         margin-right: 15px;
         .icon {
           img {
@@ -653,6 +726,22 @@ nav {
   }
   .m-action {
     display: none;
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 90%;
+    .backdrop {
+      padding: 135px 60px;
+      .date_time {
+        display: flex;
+        justify-content: space-between;
+        label {
+          width: 45%;
+        }
+      }
+    }
   }
 }
 
@@ -747,7 +836,7 @@ nav {
     .four_cards {
       // overflow: hidden;
       .card {
-        width: 23.7%;
+        width: 25%;
       }
     }
   }
@@ -847,6 +936,13 @@ nav {
   }
   .s_step .aside_wrapper .upcoming .wrap_event .event {
     width: 100%;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80%;
   }
 }
 

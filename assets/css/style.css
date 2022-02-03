@@ -550,6 +550,75 @@ nav .hamburger {
   width: 100%;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+}
+
+.overlay .backdrop {
+  padding: 135px 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.overlay .backdrop .wrap {
+  background-color: #fff;
+  height: auto;
+  padding: 40px 20px;
+}
+
+.overlay .backdrop .wrap h2 {
+  font-weight: bold;
+  margin-bottom: 40px;
+  font-size: 20px;
+  line-height: 27px;
+  text-transform: capitalize;
+}
+
+.overlay .backdrop .wrap form label {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  margin-top: 20px;
+  text-transform: capitalize;
+}
+
+.overlay .backdrop .wrap form input {
+  background-color: #f4f4f4;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.overlay .backdrop .wrap form textarea {
+  background-color: #f4f4f4;
+  max-width: 100%;
+  height: 200px;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  padding: 10px;
+  border: 0;
+}
+
+.overlay .backdrop .wrap form .date_time .v-date {
+  position: relative;
+}
+
+.overlay .backdrop .wrap form .date_time .v-date .calendar {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  bottom: 34px;
+  right: 0;
+  top: 0;
+}
+
+.overlay.showevent {
+  display: block;
+}
+
 @media (max-width: 767px) {
   nav {
     padding: 25px 20px;
@@ -716,6 +785,9 @@ nav .hamburger {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
   }
   .s_step .aside_wrapper {
     margin-left: 71px;
@@ -810,7 +882,7 @@ nav .hamburger {
     overflow: scroll;
   }
   #main .four_cards .card {
-    width: 23.7%;
+    width: 30%;
     margin-right: 15px;
   }
   #main .four_cards .card .icon img {
@@ -874,6 +946,26 @@ nav .hamburger {
   }
   .m-action {
     display: none;
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 90%;
+  }
+  .overlay .backdrop {
+    padding: 135px 60px;
+  }
+  .overlay .backdrop .date_time {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .overlay .backdrop .date_time label {
+    width: 45%;
   }
 }
 
@@ -970,7 +1062,7 @@ nav .hamburger {
     padding: 0 30px;
   }
   #main .four_cards .card {
-    width: 23.7%;
+    width: 25%;
   }
   .s_step .ff_side {
     width: 80%;
@@ -1065,6 +1157,12 @@ nav .hamburger {
   }
   .s_step .aside_wrapper .upcoming .wrap_event .event {
     width: 100%;
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80%;
   }
 }
 

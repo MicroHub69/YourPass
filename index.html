@@ -11,7 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
     <section class="page_lens">
@@ -274,26 +274,8 @@
               <li>
                 <div class="tt-table">
                   <input type="checkbox" />
-                  <h3>Christ Apostolic</h3>
-                  <h3 class="g_list">msodq2018@gmail.com</h3>
-                </div>
-
-                <h3>Attending</h3>
-              </li>
-              <li>
-                <div class="tt-table">
-                  <input type="checkbox" />
                   <h3>Redemmed Christian</h3>
                   <h3 class="g_list">msodq2018@gmail.com</h3>
-                </div>
-
-                <h3>Attending</h3>
-              </li>
-              <li>
-                <div class="tt-table">
-                  <input type="checkbox" />
-                  <h3>Redemmed Christian</h3>
-                  <h3 class="g_list">durosakin@gmail.com</h3>
                 </div>
 
                 <h3>Attending</h3>
@@ -311,7 +293,25 @@
                 <div class="tt-table">
                   <input type="checkbox" />
                   <h3>Redemmed Christian</h3>
-                  <h3 class="g_list">alotosin@gmail.com</h3>
+                  <h3 class="g_list">durosakin444@gmail.com</h3>
+                </div>
+
+                <h3>Attending</h3>
+              </li>
+              <li>
+                <div class="tt-table">
+                  <input type="checkbox" />
+                  <h3>Redemmed Christian</h3>
+                  <h3 class="g_list">msodq2018@gmail.com</h3>
+                </div>
+
+                <h3>Attending</h3>
+              </li>
+              <li>
+                <div class="tt-table">
+                  <input type="checkbox" />
+                  <h3>Redemmed Christian</h3>
+                  <h3 class="g_list">alotosin5544@gmail.com</h3>
                 </div>
 
                 <h3>Attending</h3>
@@ -442,7 +442,52 @@
           ></iframe>
         </div>
       </div>
+
+      <!--=============================================
+      OVERLAY FOR ADDING EVENTS FORM AND UPLOAD IMAGE
+      ================================================== -->
+      <div class="overlay">
+        <div class="backdrop">
+          <div class="wrap">
+            <h2>Create Events</h2>
+            <form action="index" method="get">
+              <label for="text">Tittle</label>
+              <input type="text" />
+              <label for="textarea">Description</label>
+              <textarea name=""></textarea>
+              <label for="location">Location</label>
+              <input type="text" />
+              <div class="date_time">
+                <label for="date"
+                  >Date
+                  <div class="v-date">
+                    <input type="date" />
+                    <img src="images/cld.svg" class="calendar" />
+                  </div>
+                </label>
+                <label for="time"
+                  >Time
+                  <input type="time" />
+                </label>
+              </div>
+
+              <div class="upload">
+                <h4>Add Images</h4>
+                <p>Upload cover image for the banner (1080 by 240).</p>
+                <div class="file">
+                  <label for="file">
+                    <input type="file" />
+                  </label>
+                  <img src="images/img4.png" alt="" />
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- OVERLAY ENDS -->
     </section>
     <script src="navlinks.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
